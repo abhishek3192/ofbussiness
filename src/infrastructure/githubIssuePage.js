@@ -69,12 +69,6 @@ const GithubIssuePage = () => {
   const classes = useStyles();
 
   const fetchGithubIssue = async () => {
-    const token = "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";
-    const config = {
-      headers: {
-        Authorization: "token" + token,
-      },
-    };
     const response = await axios
       .get("https://api.github.com/repos/facebook/create-react-app/issues")
       .catch((err) => {
